@@ -12,24 +12,24 @@ const AddDeveloper: React.FC = () => {
         console.log(data)
     }
   return (
-    <div className="card-container">
+    <div className="card-container form-containter">
         <h2 id="page-title">Add Developer</h2>
       <form onSubmit={handleSubmit(addDeveloper)} action="" >
         <label htmlFor="name">
           <h4>Name</h4>
-          <input type="text" name="name" id="name" />
+          <input placeholder="Enter Name" type="text"  id="name" {...register("name")} />
         </label>
         <label htmlFor="organisation">
           <h4>Organisation</h4>
-          <input type="text" name="organisation" id="organisation" />
+          <input placeholder="The organsiation you are working" type="text" {...register("organisation")} id="organisation" />
         </label>
         <label htmlFor="linkedin">
           <h4>Linkedin</h4>
-          <input type="text" name="linkedin" id="linkedin" />
+          <input placeholder="Your LinkedIn Account" type="text" {...register("linkedin")} id="linkedin" />
         </label>
         <label htmlFor="advise">
           <h4>Your advise</h4>
-          <input   type="text" name="advise" id="advise" />
+          <input  placeholder="The answer of the question you are asked..." type="text" {...register("advise")} id="advise" />
         </label>
         <button type="submit">Add Developer</button>
       </form>

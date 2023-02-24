@@ -1,7 +1,27 @@
+import axios from "axios";
+import CompanyCard from "../cards/CompanyCard";
+import DeveloperCard from "../cards/DeveloperCard";
+import { useState, useEffect } from "react";
+
 const Home: React.FC = () => {
+  const [devs, setDevs] = useState([]);
+  const [companys, setCompanys] = useState([]);
+
+  useEffect(() => {
+     axios.get().then(data => setDevs(data.data))
+  }, [])
+  
+
   return (
     <div>
-      <h1>This is the Home page of the web app</h1>
+      <div className="card-container home-title">
+        <h2 className="">Developers</h2>
+      </div>
+      <DeveloperCard />
+      <div className="card-container home-title company">
+        <h2 className=" ">Companys</h2>
+      </div>
+      <CompanyCard />
     </div>
   );
 };
