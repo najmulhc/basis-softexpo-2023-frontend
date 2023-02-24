@@ -5,7 +5,8 @@
 
 .company-type {
     font-weight: 500;
-    background-color: purple;
+    background-color: #ffc03c;
+    color: #0f0f0f;
     display: inline-block;
     font-size: .75rem;
     padding: .375rem;
@@ -22,10 +23,11 @@
 }
 
 .bottom-text-container {
+    width: 100%;
     margin-top: 3rem;
     display: flex;
-    justify-content: flex-start;
-    gap: 5rem;
+    justify-content: space-between;
+  
     align-items: center;
 }
 
