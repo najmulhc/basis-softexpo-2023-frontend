@@ -16,7 +16,7 @@
 .bottom-text {
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    font-size: .75rem;
     gap: .125rem;
     font-weight: 500;
 }
@@ -40,4 +40,8 @@
     display: flex;
     align-items: center;
     gap: .25rem;
+}
+
+.developer-name{
+    font-size: 1.5rem;
 }

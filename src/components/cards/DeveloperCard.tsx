@@ -1,23 +1,22 @@
 import { FaLinkedin } from "react-icons/fa";
-interface Developer {}
 
-const DeveloperCard: React.FC = (props: Developer) => {
-  const developer = {
-    name: "Sumit Saha",
-    organisation: "Analyzen",
-    linkedin: "/in/sumit-saha",
-    advise: "use typescript while using react for better developer experince.",
-  };
+interface Developer {
+  name: string;
+  organization: string;
+  socilaMedia: string;
+  opinion: string;
+}
+const DeveloperCard: React.FC<Developer> = (props: Developer) => {
   return (
     <div className="card-container">
-      <h2 className="company-name">{developer.advise}</h2>
+      <h2 className="company-name">{props.opinion}</h2>
       <div className="bottom-text-container bottom-text-flex">
-        <h3 className="bottom-text">{developer.name}</h3>
-        <h3 className="company-type">{developer.organisation}</h3>
+        <h3 className="bottom-text developer-name">{props.name}</h3>
+        <h3 className="company-type">{props.organization}</h3>
         <h3 className="linkedin">
           {" "}
           <FaLinkedin />
-          {developer.linkedin}
+          {props.socilaMedia}
         </h3>{" "}
       </div>
     </div>
